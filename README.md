@@ -25,6 +25,7 @@ UBUNTU-PortableDMachine
 ## INSTRUCTIONS
 - Install Docker on your system 
 - Open the terminal inside the project directory
+- create a folder with the name "VData" in the root of the project before continuing 
 - run "docker compose build"
 - run "docker compose up -d"
 
