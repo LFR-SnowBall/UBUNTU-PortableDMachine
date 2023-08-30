@@ -1,0 +1,20 @@
+version: '3'
+services:
+  ubuntu_machine:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: ubuntu
+    container_name: ubuntu_machine
+    privileged: true
+    volumes:
+      - ./VData:/root
+    ports:
+      - "8080:80"
+      - "2222:22"
+    networks:
+      - ubuntu_network
+    restart: always
+networks:
+  ubuntu_network:
+    driver: bridge
